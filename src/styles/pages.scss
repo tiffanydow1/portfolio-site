@@ -1,0 +1,29 @@
+@import './variables.scss'; 
+
+// INDEX PAGE 
+
+.background-container {
+    width: 45%;
+    background-color: $eggshell-color;
+    height: 1000px;
+    .about-container {
+        display: flex;
+        height: 500px;
+        width: 700px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid black;
+        .about-card {
+            width: 40%;
+            text-align: center;
+            .line {
+                width: 25%;
+                background-color: $plum-color;
+                height: 3px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
