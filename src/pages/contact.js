@@ -1,16 +1,14 @@
 import React from 'react'
 import Header from '../components/header'
-import Layout from '../components/layout'
+import Layout from '../components/common/Layout/index'
 
-function Contact() {
-    return (
+const Contact = () => (
         <Layout>
             <div style={{ color: `teal` }}>
                 <Header headerText="Contact" />
                 <p>Send us a message!</p>
             </div>
         </Layout>
-    )
-}
+)
 
 export default Contact;

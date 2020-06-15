@@ -1,6 +1,8 @@
 import React from 'react'
 import { useStaticQuery, Link, graphql } from 'gatsby'
-import '../styles/navigation.scss'
+import { FormattedMessage } from 'react-intl'
+import { LangSwitcher } from '../../common/LangSwitcher'
+import '../../../styles/navigation.scss'
 
 const ListLink = props => (
     <li>
@@ -8,7 +10,7 @@ const ListLink = props => (
     </li>
 )
 
-function Navigation() {
+const Navigation = () => {
     // Non-Page Components use StaticQuery
     const data = useStaticQuery(
         graphql`
@@ -33,9 +35,16 @@ function Navigation() {
                     <h5>{data.site.siteMetadata.subTitle}</h5>
                 </Link>
                 <ul className="nav-links">
-                    <ListLink to="/">Home</ListLink>
-                    <ListLink to="/about">About</ListLink>
-                    <ListLink to="/contact">Contact</ListLink>
+                    <ListLink to="/">
+                        <FormattedMessage id="home" />
+                    </ListLink>
+                    <ListLink to="/about">
+                        <FormattedMessage id="about" />
+                    </ListLink>
+                    <ListLink to="/contact">
+                        <FormattedMessage id="contact" />
+                    </ListLink>
+                    <LangSwitcher />
                 </ul>
             </div>
         </header>

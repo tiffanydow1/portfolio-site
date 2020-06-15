@@ -5,6 +5,20 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    siteTitle: `Tiffany Dow | Developer`,
+    mainTitle: `Tiffany Dow`,
+    subTitle: `Software Developer`
+  },
+  plugins: [ `gatsby-plugin-sass`,
+             `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-transformer-remark`,
+  ],
 }

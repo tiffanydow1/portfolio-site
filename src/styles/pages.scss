@@ -8,22 +8,62 @@
     height: 1000px;
     .about-container {
         display: flex;
-        height: 500px;
-        width: 700px;
+        width: 75%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border: 1px solid black;
+        align-items: center;
         .about-card {
-            width: 40%;
+            width: 50%;
             text-align: center;
+            background-color: $plum-color;
+            padding-top: 30px;
+            box-shadow: -11.31px 11.31px 17px 0px rgba(131, 131, 124, 0.23);
+            img {
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+            }
             .line {
                 width: 25%;
-                background-color: $plum-color;
+                background-color: $eggshell-color;
                 height: 3px;
                 margin: 0 auto;
             }
+            .social-links {
+                background-color: $white;
+                display: flex;
+                justify-content: space-evenly;
+                padding: 10px;
+                img {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+        .about-text {
+            width: 50%;
+            text-align: center;
+            padding: 0 30px;
+            h1 {
+                font-size: 100px;
+                margin: 0;
+            }
+            .btn-container {
+                display: flex;
+                justify-content: space-evenly;
+                .about-btn {
+                    background-color: $plum-color;
+                    color: $white;
+                }
+                .about-btn:hover {
+                    background-color: $white;
+                    border: 3px solid $plum-color;
+                    color: $plum-color;
+                    font-weight: 500;
+                }
+            } 
         }
     }
 }
