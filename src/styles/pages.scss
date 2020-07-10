@@ -89,11 +89,14 @@
 
 .resume-container {
     background-color: $background-color;
+    padding-bottom: 100px;
     .body-container {
+        max-width: 850px;
+        margin: 0 auto;
         .title-container {
             margin: 0 auto;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 30px;
             .download-btn {
@@ -101,9 +104,13 @@
                 color: $white;
                 width: 150px;
             }
+            .download-btn:hover {
+                background-color: transparent;
+                border: 2px solid $accent-color;
+                color: $accent-color;
+            }
         }
         .resume-block {
-            width: 724px;
             background-color: $white;
             margin: 0 auto;
             padding: 50px;
@@ -129,7 +136,88 @@
                 }
                 .right-container {
                     width: 60%;
+                    a {
+                        font-family: $main-font;
+                        color: $accent-color;
+                    }
                 }
+            }
+        }
+        .education {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            .date-text {
+                width: 40%;
+                margin-top: 0px;
+            }
+            .education-text {
+                width: 60%;
+                h6 {
+                    font-size: 17px;
+                    font-family: $main-font;
+                }
+            }
+        }
+        .skills-block {
+            display: flex;
+            flex-wrap: wrap;
+            .skills {
+                display: flex;
+                align-items: center;
+                width: 33.333%;
+                .colored-block {
+                    width: 15px;
+                    height: 15px;
+                    background-color: $accent-color;
+                    margin-right: 15px;
+                }
+                h4 {
+                    font-family: $main-font;
+                }
+            }
+        }
+    }
+}
+
+// PROJETS PAGE
+
+.projects-container {
+    background-color: $background-color;
+    padding-bottom: 100px;
+    .body-container {
+        .intro-text {
+            font-size: 18px;
+        }
+        .project-block {
+            background-color: $white;
+            display: flex;
+            margin-bottom: 50px;
+            .left-container {
+                width: 60%;
+                .block-header {
+                    border-left: 10px solid $accent-color;
+                    padding-left: 30px;
+                    h2 {
+                        margin-top: 75px;
+                        margin-bottom: 0px;
+                        font-size: 25px;
+                        color: $accent-color;
+                    }
+                    p {
+                        margin-top: 5px;
+                        font-size: 18px;
+                    }
+                }
+                .block-text {
+                    padding-left: 40px;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .right-container {
+                width: 40%;
             }
         }
     }

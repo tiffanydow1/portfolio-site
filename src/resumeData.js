@@ -1,3 +1,4 @@
+
 export const jobData = [
     {
         "date": "Current",
@@ -17,3 +18,34 @@ export const jobData = [
         "link": "https://www.google.com"
     }
 ]
+
+
+
+export const educationData = [
+    {
+        "date": "2018",
+        "schoolName": "Lighthouse Labs",
+        "program": "Fullstack Web Development Diploma",
+        "logoLink": "../images/lighthouselabs-logo.png"
+    },
+    {
+        "date": "2017",
+        "schoolName": "Skillcrush",
+        "program": "Front-End Web Development Diploma",
+        "logoLink": "../images/skillcrush_logo.png"
+    },
+    {
+        "date": "2013 - 2015",
+        "schoolName": "Memorial University of Newfoundland",
+        "program": "Bachelor of Engineering & Applied Science - Electrical and Computer Engineering",
+        "logoLink": "../images/mun-logo.jpg"
+    },
+    {
+        "date": "2007 - 2011",
+        "schoolName": "Memorial University of Newfoundland",
+        "program": "Bachelor's Degree - Geographical Science",
+        "logoLink": "../images/mun-logo.jpg"
+    }
+]
+
+export const skillsData = ['HTML/CSS', 'JavaScript', 'React/Redux', 'SASS/SCSS', 'Node.js', 'MongoDB', 'Bootstrap/Material UI', 'GitHub/Bitbucket', 'Python' ]

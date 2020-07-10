@@ -7,11 +7,15 @@ import '../styles/styles.scss'
 import '../styles/pages.scss'
 
 import { jobData } from '../resumeData.js'
+import { educationData } from '../resumeData.js' 
+import { skillsData } from '../resumeData.js'
 
 class Resume extends Component {
 
     state = {
-        resumeInfo: null
+        resumeInfo: null,
+        educationInfo: null,
+        skillsInfo: null
     }
 
     componentDidMount() {
@@ -32,16 +36,41 @@ class Resume extends Component {
                         <div className="right-container">
                             <h5>{data.firstPara}</h5>
                             <h5>{data.secondPara}</h5>
+                            {data.link ? ( <a href={data.link}>Sample of Work</a>) : ''}
                         </div>
                     </div>
                 </div>
             )
         })
 
+        const educationText = educationData.map((data) => {
+            return (
+                <div className="education">
+                    <h4 className="date-text">{data.date}</h4>
+                    <div className="education-text">
+                        <h6>{data.schoolName}</h6>
+                        <p>{data.program}</p>
+                    </div>
+                </div>
+            )
+        })
+
+        const skillsText = skillsData.map((data) => {
+            return (
+                <div className="skills">
+                    <div className="colored-block"></div>
+                    <h4 className="skills-text">{data}</h4>
+                </div>
+            )
+        })
+
         this.setState({
-            resumeInfo: jobText
+            resumeInfo: jobText,
+            educationInfo: educationText,
+            skillsInfo: skillsText
         })
     }
+
 
     render() {
         
@@ -56,6 +85,14 @@ class Resume extends Component {
                             <Button classname="download-btn" text={"Download CV"} />
                         </div>
                         {this.state.resumeInfo}
+                        <h2>Education</h2>
+                        <div className="resume-block">
+                            {this.state.educationInfo}
+                        </div>
+                        <h2>Skills</h2>
+                        <div className="resume-block skills-block">
+                            {this.state.skillsInfo}
+                        </div>
                     </div>
                 </div>
             </Layout>
