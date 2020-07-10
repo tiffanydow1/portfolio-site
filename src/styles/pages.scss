@@ -1,14 +1,7 @@
 @import './variables.scss'; 
 
-// 
-
-// INDEX PAGE 
-
+// ABOUT(INDEX) PAGE 
 .background-container {
-    // width: 40%;
-    // max-width: 500px;
-    // background-color: $background-color;
-    // height: 700px;
     width: 100%;
     .color-bg {
         background-color: $background-color;
@@ -39,6 +32,11 @@
                 background-color: $accent-color;
                 height: 3px;
                 margin: 0 auto;
+            }
+            h5 {
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                font-size: 17px;
             }
             .social-links {
                 background-color: $white;
@@ -83,6 +81,56 @@
                     border: 1px solid $accent-color;
                 }
             } 
+        }
+    }
+}
+
+// RESUME PAGE
+
+.resume-container {
+    background-color: $background-color;
+    .body-container {
+        .title-container {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 30px;
+            .download-btn {
+                background-color: $accent-color;
+                color: $white;
+                width: 150px;
+            }
+        }
+        .resume-block {
+            width: 724px;
+            background-color: $white;
+            margin: 0 auto;
+            padding: 50px;
+            margin-bottom: 50px;
+            border: 0px solid rgba(0, 0, 0, 1);
+            box-shadow: -11.31px 11.31px 25px 0px rgba(138,131,124,0.23);
+            .date-text {
+                color: $accent-color;
+                font-family: $main-font;
+                font-size: 20px;
+            }
+            .resume-text {
+                display: flex;
+                align-items: center;
+                .left-container {
+                    width: 40%;
+                    h6 {
+                        margin: 0;
+                        font-family: $main-font;
+                        text-transform: uppercase;
+                        font-size: 17px;
+                    }
+                }
+                .right-container {
+                    width: 60%;
+                }
+            }
         }
     }
 }
