@@ -1,7 +1,8 @@
 {
     "language": "en",
     "hello": "Hello",
-    "home": "Home",
     "about": "About",
+    "resume": "Resume",
+    "projects": "Projects",
     "contact": "Contact"
 }

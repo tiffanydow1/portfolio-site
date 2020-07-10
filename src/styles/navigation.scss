@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 30px;
     .logo-link {
         text-decoration: none;
         display: flex;
@@ -11,7 +12,7 @@
         .colored-block {
             height: 18px;
             width: 18px;
-            background-color: $plum-color;
+            background-color: $accent-color;
             margin-right: 5px;
         }
         h5 {
@@ -22,14 +23,33 @@
     .nav-links {
         display: flex;
         justify-content: space-evenly;
-        width: 30%;
+        width: 40%;
         list-style: none;
         font-family: $main-font;
         font-weight: 300;
+        .nav-active {
+            color: $accent-color;
+        }
         a {
             text-decoration: none;
             color: $black;
             text-transform: uppercase;
+        }
+        a:hover {
+            color: $accent-color;
+        }
+        .lang-switcher {
+            background-color: $white;
+            border: none;
+            font-family: $main-font;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 16px;
+            padding: 0px;
+        }
+        .lang-switcher:hover {
+            cursor: pointer;
+            color: $accent-color;
         }
     }
 }

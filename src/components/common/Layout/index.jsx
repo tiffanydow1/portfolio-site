@@ -8,6 +8,7 @@ import Navigation from './navigation'
 import localEng from '../../../messages/en.json'
 import localFr from '../../../messages/fr.json'
 import '../../../styles/layout.scss'
+import Footer from '../../footer'
 
 import '@formatjs/intl-relativetimeformat/dist/locale-data/en'
 import '@formatjs/intl-relativetimeformat/dist/locale-data/fr'
@@ -24,6 +25,7 @@ const Layout = ({ children }) => (
                 </IntlProvider>
             )}
         </Context.Consumer>
+        <Footer />
     </Provider>
 )
 

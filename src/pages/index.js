@@ -31,6 +31,7 @@ function Home() {
     <Layout>
       <Head title="Tiffany Dow | Welcome" />
       <div className="background-container">
+        <div className="color-bg"></div>
         <div className="about-container">
           <div className="about-card">
             <img src={headshotImg} alt="headshot-pic" />
@@ -49,8 +50,8 @@ function Home() {
             </h1>
             <h3>Here's who I am & what I do</h3>
             <div className="btn-container">
-              <Button classname="about-btn" text={"Resume"} />
-              <Button classname="about-btn" text={"Projects"} />
+              <Button classname="resume-btn" text={"Resume"} />
+              <Button classname="project-btn" text={"Projects"} />
             </div>
             <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” 
                or double click me to add your own content and make changes to the font.</p>

@@ -5,7 +5,7 @@ import { Context } from '../Context'
 const LangSwitcher = () => (
     <Context.Consumer>
         {({ toggleLanguage }) => (
-            <button type="button" onClick={toggleLanguage}>
+            <button className="lang-switcher" type="button" onClick={toggleLanguage}>
                 <FormattedMessage id="language" />
             </button>
         )}
