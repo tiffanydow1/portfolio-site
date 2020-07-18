@@ -1,5 +1,11 @@
 const initialState = {
-    currentPage: 'about'
+    currentPage: 'about',
+    menuItems: [
+        { title: 'about', url: '/' },
+        { title: 'resume', url: '/resume' },
+        { title: 'projects', url: '/projects' },
+        { title: 'contact', url: '/contact' }
+    ]
 };
 
 //action creator

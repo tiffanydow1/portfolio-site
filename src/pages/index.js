@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl'
 import Layout from '../components/common/Layout/index'
 import Button from '../components/button'
 import Head from '../components/common/Head'
+import ScrollArrow from '../components/scrollArrow'
 import '../styles/styles.scss'
 import '../styles/pages.scss'
 import headshotImg from '../images/about-pic.jpg'
@@ -38,6 +39,14 @@ function Home() {
             <h2>{data.site.siteMetadata.mainTitle}</h2>
             <div className="line"></div>
             <h5>{data.site.siteMetadata.subTitle}</h5>
+            <div className="btn-container">
+              <Link to="/resume">
+                <Button classname="resume-btn" text={"Resume"} />
+              </Link>
+              <Link to="/projects">
+                <Button classname="project-btn" text={"Projects"} />
+              </Link>
+            </div>
             <div className="social-links">
               <a href="https://www.linkedin.com/in/tiffany-dow" target="_blank">
                 <img src={linkedinIcon} alt="linkedIn icon" />
@@ -67,6 +76,7 @@ function Home() {
           </div>
         </div>
       </div>
+      {/* <ScrollArrow /> */}
     </Layout>
   )
 }

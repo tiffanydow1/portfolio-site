@@ -21,8 +21,7 @@
 }
 
 .fixed-footer {
-    width: 100%;
-    position: fixed; 
+    width: 100%; 
     background: $white;
     color: $black;
     bottom: 0;
@@ -57,6 +56,44 @@
                     height: 20px;
                     margin: 0 5px;
                 }
+            }
+        }
+    }
+}
+
+// MOBILE STYLES 
+
+@media screen and (max-width: 950px) {
+    .fixed-footer {
+        flex-direction: column-reverse;
+        padding: 0 15px;
+        .left-container {
+            width: 100%;
+            margin-left: 0;
+        }
+        .right-container {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: end;
+            .phone-div {
+                width: 40%;
+            }
+            .email-div {
+                width: 50%;
+            }
+            .social-div {
+                width: 50%;
+                .title {
+                    margin-top: 0;
+                }
+                .icon-container {
+                    img {
+                        margin-left: 0;
+                    }
+                }
+            }
+            .title {
+                text-align: left;
             }
         }
     }
