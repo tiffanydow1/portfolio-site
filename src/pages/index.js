@@ -54,7 +54,7 @@ function Home() {
             <h1>
               <FormattedMessage id="hello" />
             </h1>
-            <h3>Here's who I am & what I do</h3>
+            <h3>I'm Tiffany, a software developer based in Montreal, QC.</h3>
             <div className="btn-container">
               <Link to="/resume">
                 <Button classname="resume-btn" text={"Resume"} />
@@ -63,9 +63,7 @@ function Home() {
                 <Button classname="project-btn" text={"Projects"} />
               </Link>
             </div>
-            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” 
-               or double click me to add your own content and make changes to the font.</p>
-            <p>I’m a great place for you to tell a story and let your users know a little more about you.</p>
+            <p>I aim to create seamless user experiences. I'm most experienced as a MERN (MongoDB, Express, React & Node.js) developer however as a life-long learner, I'm always looking to improve my skills in different areas.</p>
           </div>
         </div>
       </div>
