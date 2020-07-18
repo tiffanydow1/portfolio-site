@@ -12,18 +12,28 @@ const Footer = () => {
             <div className="right-container">
                 <div className="phone-div">
                     <p className="title">Call</p>
-                    <p>709-769-7159</p>
+                    <a href="tel:+1-709-769-7159">
+                        <p>709-769-7159</p>
+                    </a>
                 </div>
                 <div className="email-div">
                     <p className="title">Email</p>
-                    <p>tiffanyjdow@gmail.com</p>
+                    <a href="mailto: tiffanyjdow@gmail.com">
+                        <p>tiffanyjdow@gmail.com</p>
+                    </a>
                 </div>
                 <div className="social-div">
                     <p className="title">Connect</p>
                     <div className="icon-container">
-                        <img src={linkedinIcon} alt="linkedIn icon" />
-                        <img src={githubIcon} alt="github icon" />
-                        <img src={gmailIcon} alt="gmail icon" />
+                        <a href="https://www.linkedin.com/in/tiffany-dow" target="_blank">
+                            <img src={linkedinIcon} alt="linkedIn icon" />
+                        </a>
+                        <a href="https://github.com/tiffanydow1" target="_blank">
+                            <img src={githubIcon} alt="github icon" />
+                        </a>
+                        <a href="mailto: tiffanyjdow@gmail.com">
+                            <img src={gmailIcon} alt="gmail icon" />
+                        </a>      
                     </div>
                 </div>
             </div>

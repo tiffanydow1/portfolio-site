@@ -34,9 +34,17 @@ class Resume extends Component {
                             <p>{data.location}</p>
                         </div>
                         <div className="right-container">
-                            <h5>{data.firstPara}</h5>
-                            <h5>{data.secondPara}</h5>
-                            {data.link ? ( <a href={data.link}>Sample of Work</a>) : ''}
+                            <ul>
+                                {data.jobDescriptions && data.jobDescriptions.map((item) => {
+                                    return (
+                                        <li>
+                                            {item}
+                                        </li>
+                                    )
+                                }
+                                )}
+                            </ul>
+                            {data.link ? ( <a href={data.link} target="_blank">Sample of Work</a>) : ''}
                         </div>
                     </div>
                 </div>
@@ -46,7 +54,11 @@ class Resume extends Component {
         const educationText = educationData.map((data) => {
             return (
                 <div className="education">
-                    <h4 className="date-text">{data.date}</h4>
+                    <div className="education-image">
+                        <h4 className="date-text">{data.date}</h4>
+                        <img src={data.logoLink} alt="logo" />
+                    </div>
+                    
                     <div className="education-text">
                         <h6>{data.schoolName}</h6>
                         <p>{data.program}</p>

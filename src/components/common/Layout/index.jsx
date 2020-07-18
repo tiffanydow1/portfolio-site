@@ -30,16 +30,3 @@ const Layout = ({ children }) => (
 )
 
 export default Layout
-
-
-// function Layout({ children }) {
-    
-//     return (
-//         <div>
-//             <Navigation />
-//             {children}
-//         </div>
-//     )
-// }
-
-// export default Layout;

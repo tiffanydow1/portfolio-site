@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
+import { connect } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
 import { LangSwitcher } from '../../common/LangSwitcher'
+import { showCurrentPage } from '../../../state/app'
 import '../../../styles/navigation.scss'
 
 class Navigation extends Component {
@@ -16,6 +18,7 @@ class Navigation extends Component {
     }
     
     render() {
+        console.log(this.props.currentPage, 'cP')
         return (
             <header>
                 <div className="nav-container">
@@ -30,14 +33,14 @@ class Navigation extends Component {
                             <li key={index}>
                                 <Link to={item.url}
                                       key={index} 
-                                      className={this.state.activeItem === item.title ? 'nav-active' : ''}
-                                      onClick={() => this.handleActiveClick(index)}
+                                      className={this.props.currentPage === item.title ? 'nav-active' : ''}
+                                      onClick={() => this.props.dispatch(showCurrentPage(item.title))}
                                 >
                                 <FormattedMessage id={item.title} />
                                 </Link>
                             </li>
                         )} 
-                        <LangSwitcher />
+                        {/* <LangSwitcher /> */}
                     </ul>
                 </div>
             </header>
@@ -45,4 +48,7 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+export default connect(state => ({
+    currentPage: state.app.currentPage
+}), null)(Navigation)
+

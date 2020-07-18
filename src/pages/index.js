@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import { FormattedMessage } from 'react-intl'
 import Layout from '../components/common/Layout/index'
 import Button from '../components/button'
@@ -28,7 +28,7 @@ function Home() {
   )
 
   return (
-    <Layout>
+    <Layout currentPage="about">
       <Head title="Tiffany Dow | Welcome" />
       <div className="background-container">
         <div className="color-bg"></div>
@@ -39,9 +39,15 @@ function Home() {
             <div className="line"></div>
             <h5>{data.site.siteMetadata.subTitle}</h5>
             <div className="social-links">
-              <img src={linkedinIcon} alt="linkedIn icon" />
-              <img src={githubIcon} alt="github icon" />
-              <img src={gmailIcon} alt="gmail icon" />
+              <a href="https://www.linkedin.com/in/tiffany-dow" target="_blank">
+                <img src={linkedinIcon} alt="linkedIn icon" />
+              </a>
+              <a href="https://github.com/tiffanydow1" target="_blank">
+                <img src={githubIcon} alt="github icon" />
+              </a>
+              <a href="mailto: tiffanyjdow@gmail.com">
+                <img src={gmailIcon} alt="gmail icon" />
+              </a>
             </div>
           </div>
           <div className="about-text">
@@ -50,8 +56,12 @@ function Home() {
             </h1>
             <h3>Here's who I am & what I do</h3>
             <div className="btn-container">
-              <Button classname="resume-btn" text={"Resume"} />
-              <Button classname="project-btn" text={"Projects"} />
+              <Link to="/resume">
+                <Button classname="resume-btn" text={"Resume"} />
+              </Link>
+              <Link to="/projects">
+                <Button classname="project-btn" text={"Projects"} />
+              </Link>
             </div>
             <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” 
                or double click me to add your own content and make changes to the font.</p>
@@ -64,4 +74,6 @@ function Home() {
 }
 
 export default Home;
+
+
 

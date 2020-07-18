@@ -29,6 +29,7 @@
         font-weight: 300;
         .nav-active {
             color: $accent-color;
+            border-bottom: 2px solid $accent-color;
         }
         a {
             text-decoration: none;

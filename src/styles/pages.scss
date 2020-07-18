@@ -73,7 +73,7 @@
                 .project-btn {
                     background-color: $white;
                     color: $black;
-                    border: 2px solid $black;
+                    border: 2px solid $accent-color;
                 }
                 .project-btn:hover {
                     background-color: $accent-color;
@@ -124,7 +124,6 @@
             }
             .resume-text {
                 display: flex;
-                align-items: center;
                 .left-container {
                     width: 40%;
                     h6 {
@@ -136,9 +135,17 @@
                 }
                 .right-container {
                     width: 60%;
+                    ul {
+                        margin: 0;
+                        li {
+                            margin-bottom: 15px;
+                            font-family: $main-font;
+                        }
+                    }
                     a {
                         font-family: $main-font;
                         color: $accent-color;
+                        padding-inline-start: 40px;
                     }
                 }
             }
@@ -147,9 +154,15 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            .date-text {
-                width: 40%;
-                margin-top: 0px;
+            .education-image {
+                .date-text {
+                    width: 40%;
+                    margin-top: 0px;
+                }
+                img {
+                    width: 150px;
+                    height: auto;
+                }
             }
             .education-text {
                 width: 60%;
@@ -219,6 +232,79 @@
             .right-container {
                 width: 40%;
             }
+        }
+    }
+}
+
+// CONTACT PAGE 
+
+.contact-container {
+    background-color: $background-color;
+    padding-bottom: 100px;
+    form {
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        padding: 50px;
+        margin: 0 auto;
+        box-shadow: -11.31px 11.31px 25px 0px rgba(138, 131, 124, 0.23);
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            label {
+                width: 45%;
+                input {
+                    border: none;
+                    border-bottom: 2px solid black;
+                    width: 100%;
+                }
+                input:hover,
+                input:active {
+                    border-bottom: 2px solid $accent-color;
+                }
+            }
+            span {
+                color: $accent-color;
+            }
+        }
+        label {
+            width: 100%;
+            input {
+                width: 100%;
+                border: none;
+                border-bottom: 2px solid $black;
+            }
+            input:hover,
+            input:active {
+                border-bottom: 2px solid $accent-color;
+            }
+            textarea {
+                border: none;
+                border-bottom: 2px solid $black;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            textarea:hover,
+            textarea:active {
+                border-bottom: 2px solid $accent-color;
+            }
+        }
+        button {
+            cursor: pointer;
+            height: 35px;
+            min-height: 19px;
+            width: 115px;
+            background-color: $accent-color;
+            color: $white;
+            border: 2px solid $accent-color;
+            border-radius: 20px;
+            text-transform: uppercase;
+            align-self: flex-end;
+        }
+        button:hover {
+            background-color: transparent;
+            color: $black;
         }
     }
 }

@@ -44,6 +44,12 @@
         display: flex;
         width: 40%;
         justify-content: space-evenly;
+        .phone-div,
+        .email-div {
+            a {
+                text-decoration: none;
+            }
+        }
         .social-div {
             .icon-container {
                 img {
